@@ -42,7 +42,8 @@ class UrTube:
             if user.nickname == nickname and user.password == self.hash_password(password):
                 self.current_user = user
                 return
-        print('Неверный логин или пароль')
+            else:
+                print('Неверный логин или пароль')
 
     def register(self, nickname, password, age):
         for user in self.users:
